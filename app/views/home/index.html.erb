@@ -1,1 +1,10 @@
 <h1>CRO Calculator</h1>
+
+<%= form_tag do |f| %>
+
+<p>Weekly Ad Spend: <%= text_field_tag(:ad_spend) %></p>
+<p>CVR (conversion rate): <%= text_field_tag(:cvr) %></p>
+<p>CTR (click through rate): <%= text_field_tag(:ctr) %></p>
+<p>CAC (customer acquisition cost): <%= text_field_tag(:cac, '', { class: 'cac', disabled: true }) %></p>
+
+<% end %>
