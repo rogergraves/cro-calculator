@@ -2,9 +2,9 @@
 
 <%= form_tag do |f| %>
 
-<p>Weekly Ad Spend: <%= text_field_tag(:ad_spend) %></p>
-<p>CVR (conversion rate): <%= text_field_tag(:cvr) %></p>
-<p>CTR (click through rate): <%= text_field_tag(:ctr) %></p>
+<p>Weekly Ad Spend: <%= text_field_tag(:ad_spend, 10000) %></p>
+<p>CVR (conversion rate): <%= number_field_tag(:cvr, 0, { min: 0, max: 100 }) %> % (0-100)</p>
+<p>CTR (click through rate): <%= number_field_tag(:ctr, 0, { min: 0, max: 100 }) %> % (0-100)</p>
 <p>CAC (customer acquisition cost): <%= text_field_tag(:cac, '', { class: 'cac', disabled: true }) %></p>
 
 <% end %>
