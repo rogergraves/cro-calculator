@@ -2,9 +2,9 @@
 
 <%= form_tag do |f| %>
 
-<p>Weekly Ad Spend: $<%= text_field_tag(:ad_spend, 10000, onchange: 'calculate_cro()') %></p>
-<p>Link Clicks: <%= number_field_tag(:link_clicks, 1000, onchange: 'calculate_cro()') %> </p>
-<p>CVR (conversion rate): <%= number_field_tag(:cvr, 7.2, { min: 0, max: 100, onchange: 'calculate_cro()'}) %> %</p>
-<p>CAC (customer acquisition cost): $<%= text_field_tag(:cac, '', { class: 'cac', disabled: true }) %></p>
+<p>Weekly Ad Spend: $<%= text_field_tag(:ad_spend, 10000, onkeyup: 'calculate_cro()') %></p>
+<p>Link Clicks: <%= number_field_tag(:link_clicks, 1000, onkeyup: 'calculate_cro()') %></p>
+<p>CVR (conversion rate): <%= number_field_tag(:cvr, 7.2, { min: 0, max: 100, onkeyup: 'calculate_cro()'}) %>%</p>
+<p>CAC (customer acquisition cost): $<span id="cac">calculating...</span></p>
 
 <% end %>
